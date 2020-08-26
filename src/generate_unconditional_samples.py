@@ -41,7 +41,7 @@ def sample_model(
      (i.e. contains the <model_name> folder)
     """
     models_dir = os.path.expanduser(os.path.expandvars(models_dir))
-    enc = encoder.get_encoder(model_name, models_dir)
+    enc = encoder.get_encoder(model_name)
     hparams = model.default_hparams()
     with open(os.path.join(models_dir, model_name, 'hparams.json')) as f:
         hparams.override_from_dict(json.load(f))
