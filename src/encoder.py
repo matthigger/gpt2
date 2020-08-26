@@ -1,12 +1,11 @@
 """Byte pair encoding utilities"""
 
 import json
-import pathlib
 from functools import lru_cache
 
 import regex as re
 
-models_dir = pathlib.Path(__file__).parents[1] / 'models'
+from .dir_setup import models_dir
 
 
 @lru_cache()
